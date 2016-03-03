@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20160303000759) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "tasks_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "task_id"
+  end
+
+  add_index "tasks_users", ["task_id"], name: "index_tasks_users_on_task_id", using: :btree
+  add_index "tasks_users", ["user_id"], name: "index_tasks_users_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -41,13 +49,5 @@ ActiveRecord::Schema.define(version: 20160303000759) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "users_tasks", id: false, force: :cascade do |t|
-    t.integer "users_id"
-    t.integer "tasks_id"
-  end
-
-  add_index "users_tasks", ["tasks_id"], name: "index_users_tasks_on_tasks_id", using: :btree
-  add_index "users_tasks", ["users_id"], name: "index_users_tasks_on_users_id", using: :btree
 
 end
