@@ -1,11 +1,15 @@
 // Colors
+$red: #FFAE9E;
+$violet: #AE9EFF;
+$yellow: #FFE49E;
+$turquoise: #9EFFE4;
 
-// header
-$header-background-color: #AE9EFF;
-$header-text-color: #9EFFE4;
+// Colors: header
+$header-background-color: $violet;
+$header-text-color: $turquoise;
 
-// main
-$main-background-color: #FFE49E;
+// Colors: main
+$main-background-color: $yellow;
 
 // Spacing
 $header-padding: 1em;
