@@ -10,8 +10,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task = Task.new(task_params)
     @task.users = @task.users.presence || [current_user]
+    @task.save
 
     redirect_to action: "index"
   end
