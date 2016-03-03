@@ -11,6 +11,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(task_params)
+    @task.users = @task.users.presence || [current_user]
 
     redirect_to action: "index"
   end
@@ -18,6 +19,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :completed)
+    params.require(:task).permit(:title, :completed, :users)
   end
 end
