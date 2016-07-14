@@ -54,5 +54,6 @@ group :development do
   gem 'gem-ctags'
   gem 'gem-browse'
   gem 'rack-mini-profiler'
+  gem 'stackprof'
   gem 'flamegraph'
 end
