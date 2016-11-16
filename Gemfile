@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
+gem 'bundler', '~> 1.13.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -22,7 +22,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'devise', '3.5.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,6 +32,8 @@ gem 'devise', '3.5.6'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise', '~> 4.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,19 +42,19 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.4.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'foreman'
+  gem 'foreman', '~> 0.82.0'
   # gem 'rb-readline'
-  gem 'awesome_print'
-  gem 'thin'
-  gem 'fuubar' #, '~> 1.3.3'
-  gem 'gem-ctags'
-  gem 'gem-browse'
-  gem 'rack-mini-profiler'
-  gem 'stackprof'
-  gem 'flamegraph'
+  gem 'awesome_print', '~> 1.7.0'
+  gem 'puma', '~> 3.6.0'
+  gem 'fuubar', '~> 2.2.0'
+  gem 'gem-ctags', '~> 1.0.7'
+  gem 'gem-browse', '~> 1.0.0'
+  gem 'rack-mini-profiler', '~> 0.10.1'
+  gem 'stackprof', '~> 0.2.10'
+  gem 'flamegraph', '~> 0.9.5'
 end
