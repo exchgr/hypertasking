@@ -96,7 +96,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.20.0)
-    puma (3.6.2)
+    puma (3.12.2)
     rack (2.0.1)
     rack-mini-profiler (0.10.2)
       rack (>= 1.2.0)
@@ -205,7 +205,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
-  puma (~> 3.6.0)
+  puma (~> 3.12.2)
   rack-mini-profiler (~> 0.10.1)
   rails (= 5.0.0.1)
   rspec-rails (~> 3.0)
