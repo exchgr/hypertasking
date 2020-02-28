@@ -50,7 +50,7 @@ group :development do
   gem 'foreman', '~> 0.82.0'
   # gem 'rb-readline'
   gem 'awesome_print', '~> 1.7.0'
-  gem 'puma', '~> 3.6.0'
+  gem 'puma', '~> 3.12.3'
   gem 'fuubar', '~> 2.2.0'
   gem 'gem-ctags', '~> 1.0.7'
   gem 'gem-browse', '~> 1.0.0'
